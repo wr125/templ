@@ -18,7 +18,11 @@ func main() {
 		return component.Render(context.Background(), c.Response().Writer)
 
 	})
-
+	e.POST("/clicked", func(c echo.Context) error {
+		// Handle the button click on the server side
+		// Perform any necessary actions or return a response
+		return c.String(http.StatusOK, "Button Clicked!")
+	})
 	e.GET("/404", func(c echo.Context) error {
 		return c.String(http.StatusNotFound, "The Page You Were Looking For Was Not Found")
 	})

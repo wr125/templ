@@ -1,16 +1,15 @@
 package templates
 
 
-import
-(
-	"github.com/wr125/templates/components"
-)
+
 templ Index(siteTitle string) {
     <html>
         <head>
             <title>{ siteTitle }</title>
-            <script src="/static/js/htmx.min.js"></script>
-            <!-- Material Icons Link -->
+            <!-- htmx Link -->
+          <script src="/static/js/htmx.min.js"></script>
+          
+     <!--<script src="https://unpkg.com/htmx.org@1.9.10"></script>-->
 
  <!-- from cdn -->
 <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
@@ -43,7 +42,11 @@ templ Index(siteTitle string) {
 </div>
   <div class="col-start-1 col-end-3 ...">02 <div><button class="delay-1000 duration-100 transform hover:scale-125 transition ease-linear bg-teal-400 px-6 py-2 m-4 inline">Click Me</button></div>
 </div>
-  <div class="col-end-7 col-span-2 ...">03 @components.Snackbar("login_error") <button class="button is-black" type="submit" name="global" value="global">Click Me</button> </div>
+  <div class="col-end-7 col-span-2">03 	<button class="button is-black" hx-post="/clicked" hx-swap="outerHTML">
+    Dont Click Me
+  </button>	
+    
+</div>
   <div class="col-start-1 col-end-7 ...">04 Footer @2024</div>
 </div>
        </body>
