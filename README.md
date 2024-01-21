@@ -1,0 +1,1 @@
+#Simple project inculding htmx, templ, echo(go framework) and tailwind (css)

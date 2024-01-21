@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-SemiBold.ttf);
+  font-weight: normal;
+ 
+}
+.font-semibold { font-weight: 600; }
+
+
+h1{
+   
+}
+.col-start-2 {
+  text-align: center;
+  background-color: rgb(202, 222, 240);
+}
+.col-start-1 {
+  text-align: center;
+  float: left;
+  background-color: rgb(193, 178, 207);
+}
+.col-end-7{
+  text-align: center;
+  background-color: rgb(157, 186, 230);
+}
+.col-start-1 {
+  background-color:aquamarine;
+}
