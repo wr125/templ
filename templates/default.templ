@@ -1,0 +1,55 @@
+package templates
+
+
+
+templ Index(siteTitle string) {
+    <html>
+        <head>
+            <title>{ siteTitle }</title>
+            <!-- htmx Link -->
+          <script src="/static/js/htmx.min.js"></script>
+          
+     <!--<script src="https://unpkg.com/htmx.org@1.9.10"></script>-->
+
+ <!-- from cdn -->
+<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+/>
+<!-- Font Awesome Link -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+  crossorigin="anonymous"
+/>
+<!-- stylesheet -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+/>
+<link rel="stylesheet" type="text/css" href="/static/css/output.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+		</head>
+		<body>
+            <div class="flex flex-row w-full gap-4 items-center">{ siteTitle }
+
+             </div>
+    
+   <div class="grid grid-cols-6 gap-4">
+  <div class="col-start-2 col-span-4 ...">01 Making progress as a developer.<p class="font-semibold m-2">Looking to build a dymnamic website using tailwind, echo, htmx and templ.</p>
+</div>
+  <div class="col-start-1 col-end-3 ...">02 <div><button class="delay-1000 duration-100 transform hover:scale-125 transition ease-linear bg-teal-400 px-6 py-2 m-4 inline">Click Me</button></div>
+</div>
+  <div class="col-end-7 col-span-2">03 	<button class="button is-black" hx-post="/clicked" hx-swap="outerHTML">
+    Dont Click Me
+  </button>	
+    <img class="object-contain w-[150px] h-[150px] rounded-xl" src="/static/img/car.png" alt="Testing Image"></img>
+   
+</div>
+  <div class="col-start-1 col-end-7 ...">04 Footer ©2024</div>
+</div>
+       </body>
+    </html>
+}
