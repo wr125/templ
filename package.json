@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@material-tailwind/html": "^2.2.2",
-    "@material-tailwind/react": "^2.1.8"
+    "@material-tailwind/react": "^2.1.8",
+    "@supabase/supabase-js": "^2.39.3"
   }
 }

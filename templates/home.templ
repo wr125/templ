@@ -38,14 +38,15 @@ templ Index(siteTitle string) {
              </div>
     
    <div class="grid grid-cols-6 gap-4">
-  <div class="col-start-2 col-span-4 ...">01 Making progress as a developer.<p class="font-semibold m-2">Looking to build a dymnamic website using tailwind, echo, htmx and templ.</p>
+  <div class="col-start-2 col-span-4 ...">01 Making progress as a full-stack go developer.<p class="font-semibold m-2">This site was built using tailwind(css), echo(go framework), htmx and templ.</p>
 </div>
-  <div class="col-start-1 col-end-3 ...">02 <div><button class="delay-1000 duration-100 transform hover:scale-125 transition ease-linear bg-teal-400 px-6 py-2 m-4 inline">Click Me</button></div>
+  <div class="col-start-1 col-end-3 ...">02 <div><button class="button is-black" hx-post="/home" hx-swap="outerHTML">Click Me</button></div>
+
 </div>
   <div class="col-end-7 col-span-2">03 	<button class="button is-black" hx-post="/clicked" hx-swap="outerHTML">
     Dont Click Me
   </button>	
-    <img class="object-contain w-[150px] h-[150px] rounded-xl" src="/static/img/car.png" alt="Testing Image"></img>
+    <img class="object-contain w-[250px] h-[250px] rounded-xl" src="/static/img/car.png" alt="Testing Image"></img>
    
 </div>
   <div class="col-start-1 col-end-7 ...">04 Footer ©2024</div>

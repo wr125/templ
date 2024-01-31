@@ -31,15 +31,20 @@ func main() {
 			"Region": os.Getenv("FLY_REGION"),
 		}
 
-		t.ExecuteTemplate(w, "index.html.tmpl", data)
+		t.ExecuteTemplate(w, "home.templ", data)
 	})
 	e := echo.New()
 
-	component := templates.Index("Costfood.com")
+	component := templates.Index("ModernCars.io")
 
 	e.GET("/", func(c echo.Context) error {
 		return component.Render(context.Background(), c.Response().Writer)
 
+	})
+	e.POST("/home", func(c echo.Context) error {
+		// Handle the button click on the server side
+		// Perform any necessary actions or return a response
+		return c.HTML(http.StatusOK, "<h1>Happy that you did</h1>")
 	})
 	e.POST("/clicked", func(c echo.Context) error {
 		// Handle the button click on the server side
