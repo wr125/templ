@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for good on 2024-01-31T15:16:23Z
+# fly.toml app configuration file generated for moderncars on 2024-02-05T17:42:51Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "good"
+app = "moderncars"
 primary_region = "lhr"
 
 [build]

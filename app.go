@@ -44,7 +44,7 @@ func main() {
 	e.POST("/home", func(c echo.Context) error {
 		// Handle the button click on the server side
 		// Perform any necessary actions or return a response
-		return c.HTML(http.StatusOK, "<h1>Happy that you did</h1>")
+		return c.HTML(http.StatusOK, "<h1>Happy that you did!</h1>")
 	})
 	e.POST("/clicked", func(c echo.Context) error {
 		// Handle the button click on the server side
