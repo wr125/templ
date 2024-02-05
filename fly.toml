@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for moderncars on 2024-02-05T18:26:11Z
+# fly.toml app configuration file generated for moderncars on 2024-02-05T23:25:41Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -10,6 +10,7 @@ primary_region = "lhr"
   builder = "paketobuildpacks/builder:base"
   buildpacks = ["gcr.io/paketo-buildpacks/go"]
   [build.args]
+    BP_GO_BUILD_IMPORT_PATH = "github.com/wr125/templ/templates"
     BP_KEEP_FILES = "static/*:js/*:img/*:css/*"
 
 [env]

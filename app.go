@@ -6,8 +6,6 @@ import (
 
 	"github.com/wr125/templ/templates"
 
-	"embed"
-	"html/template"
 	"log"
 
 	"github.com/labstack/echo/v4"
@@ -15,24 +13,13 @@ import (
 	"os"
 )
 
-//go:embed templates
-var resources embed.FS
-
-var t = template.Must(template.ParseFS(resources, "templates/*"))
-
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
 
 	}
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		data := map[string]string{
-			"Region": os.Getenv("FLY_REGION"),
-		}
 
-		t.ExecuteTemplate(w, "home.templ", data)
-	})
 	e := echo.New()
 
 	component := templates.Index("ModernCars.io")

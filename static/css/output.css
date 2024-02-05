@@ -767,6 +767,11 @@ select {
   margin: 0.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -791,6 +796,11 @@ select {
   width: 100%;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .grid-flow-col {
   grid-auto-flow: column;
 }
@@ -803,6 +813,10 @@ select {
   flex-direction: row;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
@@ -811,12 +825,16 @@ select {
   gap: 1rem;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
+.gap-8 {
+  gap: 2rem;
 }
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .fill-current {
@@ -830,6 +848,10 @@ select {
 
 .p-10 {
   padding: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-semibold {

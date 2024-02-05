@@ -1,11 +1,10 @@
-package templates
+package layout
 
-
-
-templ Index(siteTitle string) {
-    <html>
+templ Base(title, username string, fromProtected, isError bool, errMsgs, sucMsgs []string) {
+	<!DOCTYPE html>
+	<html lang="en" data-theme="dark">
         <head>
-            <title>{ siteTitle }</title>
+           <!-- <title>{ siteTitle }</title>-->
             <!-- htmx Link -->
           <script src="/static/js/htmx.min.js"></script>
           
@@ -39,7 +38,7 @@ templ Index(siteTitle string) {
     <script src="https://cdn.tailwindcss.com"></script> 
     </head>
 		<body>
-            <div class="flex flex-row w-full gap-4 items-center">{ siteTitle }
+            <div class="flex flex-row w-full gap-4 items-center"><!--{ siteTitle }-->
 
              </div>
     
@@ -100,6 +99,7 @@ templ Index(siteTitle string) {
 </footer>
   </div>
 </div>
+
        </body>
     </html>
 }
