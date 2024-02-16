@@ -2,10 +2,11 @@ package templates
 
 
 
-templ Index(siteTitle string) {
-    <html>
+templ Index() {
+    <!DOCTYPE html>
+	<html lang="en" data-theme="light">
         <head>
-            <title>{ siteTitle }</title>
+            <title></title>
             <!-- htmx Link -->
           <script src="/static/js/htmx.min.js"></script>
           
@@ -39,67 +40,72 @@ templ Index(siteTitle string) {
     <script src="https://cdn.tailwindcss.com"></script> 
     </head>
 		<body>
-            <div class="flex flex-row w-full gap-4 items-center">{ siteTitle }
+      <div class="container m-auto grid grid-cols-3 gap-1">
+     <div class="tile bg-teal-500">
+       <h1 class="tile-marker">ONE</h1>
+     </div>
+     <div class="tile bg-amber-500">
+       <h1 class="tile-marker">TWO<p class="font-semibold m-4">We Are The Real Estate Agency Go To Place for Dynamic AI Chat-bot Assistants.</p></h1>
+     </div>
+     <div class="tile bg-yellow-500">
+       <h1 class="tile-marker">THREE</h1>
+     </div>
+     <div class="tile bg-lime-600">
+    <div><h1 class="tile-marker">FOUR</h1></div>
 
-             </div>
-    
-   <div class="grid grid-cols-6 gap-4">
-  <div class="col-start-2 col-span-4 ...">01 Making progress as a full-stack go developer.<p class="font-semibold m-2">This site was built using tailwind(css), echo(go framework), htmx and templ.</p>
-</div>
-  <div class="col-start-1 col-end-3 ...">02 <div><button class="button is-black" hx-post="/home" hx-swap="outerHTML">Click Me</button></div>
+     <img class="object-left-top w-[250px] h-[250px] rounded-xl float-right" src="/static/img/img.png" alt="Home Image"></img>
 
+     </div>
+     <div class="tile bg-green-600">
+       <h1 class="tile-marker">FIVE</h1>
+     </div>
+     <div class="tile bg-emerald-500">
+    <h1 class="tile-marker">SIX</h1>
+    <div class="flex items-center justify-center">
+     <ul class="list-disc">
+  <li>Choose a personalised ai assistant trained on your company data</li>
+  <li>Lead generation chat-bot</li>
+  <li>Customer support ai assistant</li>
+
+</ul>
+       </div>
+     </div>
+     <div class="tile bg-teal-500">
+       <h1 class="tile-marker">SEVEN</h1>
+     </div>
+     <div class="tile bg-purple-500">
+     <div class="list">
+ <ul>
+  <li>We believe companies no longer need to carry-out repetitive chores in the current age of AI
+</li>
+  <li>Now you can automate your business workflow with a customer facing ai assistant. 
+</li>
+  <li>Not open on late nights? No problem, let your ai assistant manage your inquiry for you.
+</li>
+  <li>Check-out our own ai chat-bot assistant on this page and see how we can help you!</li>
+</ul><br/>
+    Copyright © 2024 - All rights reserved by One-Nine!
 </div>
-  <div class="col-end-7 col-span-2">03 	<button class="button is-black" hx-post="/clicked" hx-swap="outerHTML">
-    Dont Click Me
-  </button>	
-    <img class="object-contain w-[250px] h-[250px] rounded-xl" src="/static/img/car.png" alt="Testing Image"></img>
-   
-</div>
-  <div class="col-start-1 col-end-7 ...">
-  <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
-  <nav class="grid grid-flow-col gap-4">
-  <a
- 					hx-swap="transition:true"
- 					href="/about"
- 					class="link link-hover"
-				>
-					About us
-				</a>
-         <a
- 					hx-swap="transition:true"
- 					href="/contact"
- 					class="link link-hover"
-				>
-					Contact
-				</a>
-         <a
- 					hx-swap="transition:true"
- 					href="/jobs"
- 					class="link link-hover"
-				>
-					Jobs
-				</a>
-         <a
- 					hx-swap="transition:true"
- 					href="/press"
- 					class="link link-hover"
-				>
-					Press kit
-				</a>
-  </nav> 
-  <nav>
-    <div class="grid grid-flow-col gap-4">
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
-    </div>
-  </nav> 
-  <aside>
-    <p>Copyright © 2024 - All right reserved by ModernCars.io</p>
-  </aside>
-</footer>
-  </div>
-</div>
+       <h1 class="tile-marker">EIGHT</h1>
+     </div>
+     <div class="tile bg-pink-500">
+       <h1 class="tile-marker">NINE</h1>
+     </div>
+   </div>
+           
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '65ce1e52e3074928b3ebc847' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
        </body>
     </html>
 }

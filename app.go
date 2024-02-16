@@ -22,7 +22,7 @@ func main() {
 
 	e := echo.New()
 
-	component := templates.Index("ModernCars.io")
+	component := templates.Index()
 
 	e.GET("/", func(c echo.Context) error {
 		return component.Render(context.Background(), c.Response().Writer)

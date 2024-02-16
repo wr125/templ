@@ -56,5 +56,5 @@ css:
 ## css-watch: watch build tailwindcss
 .PHONY: css-watch
 css-watch:
-	tailwindcss -i static/css/input.css -o static/css/output.css --watch
+npx	tailwindcss -i static/css/input.css -o static/css/output.css --watch
 	
